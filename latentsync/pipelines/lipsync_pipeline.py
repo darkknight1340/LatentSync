@@ -258,7 +258,7 @@ class LipsyncPipeline(DiffusionPipeline):
         print(f"Affine transforming {len(video_frames)} faces...")
         for frame in tqdm.tqdm(video_frames):
             result = self.image_processor.affine_transform(frame)
-            if result is None
+            if result is None:
                 continue;
             face = result[0] 
             box = result[1]
